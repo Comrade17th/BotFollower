@@ -18,7 +18,7 @@ public class EnemyMovement : MonoBehaviour
     private void Awake() => 
         _rigidbody = GetComponent<Rigidbody>();
 
-    private void Update()
+    private void FixedUpdate()
     {
         Vector3 heading = _followTarget.position - transform.position;
         Vector3 direction = heading.normalized;
